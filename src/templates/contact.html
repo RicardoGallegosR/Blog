@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="icon" type="image/png" href="{% static 'img/icons/favicon.ico'%}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/util.css'%}">
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Send Us A Message
+				</span>
+
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<label class="label-input100" for="name">Full name</label>
+					<input id="name" class="input100" type="text" name="name" placeholder="Enter your name..." pattern="[A-Za-z]{4-16}" required>
+					<span class="focus-input100"></span>
+				</div>
+
+
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<label class="label-input100" for="email">Email Address</label>
+					<input id="email" class="input100" type="text" name="email" placeholder="Enter your email..." pattern="[a-z0-9._]{1,10}+@[a-z0-9.]{1,10}+.[a-z]{1,3}" required>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<div class="label-input100">What do you need?</div>
+					<div>
+						<select class="js-select2" name="service">
+							<option>Please chooses</option>
+							<option>UI/UX Design</option>
+							<option>eCommerce Bussiness</option>
+							<option>Online Services</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<label class="label-input100" for="message">Message</label>
+					<textarea id="message" class="input100" name="message" placeholder="Type your message here..." pattern="[A-Za-z0-9_]{1,15}" required></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn" pattern="[^'\x22]+">
+						Send
+					</button>
+				</div>
+
+				<div class="contact100-form-social flex-c-m">
+					<a href="#" class="contact100-form-social-item flex-c-m bg1 m-r-5">
+						<i class="fa fa-facebook-f" aria-hidden="true"></i>
+					</a>
+
+					<a href="#" class="contact100-form-social-item flex-c-m bg2 m-r-5">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+
+					<a href="#" class="contact100-form-social-item flex-c-m bg3">
+						<i class="fa fa-youtube-play" aria-hidden="true"></i>
+					</a>
+				</div>
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url({%static 'img/bg-01.jpg'%});">
+			</div>
+		</div>
+	</div>
+{% endblock content%}
